@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+/*Css Variables*/
+:root{
+  --primary-color:#222;
+  --primary-color-hover:rgb(75, 75, 75);
+  --secondary-color:#1e2124;
+  --secondary-color-hover:#00393d;
+  --light-color:rgba(169, 169, 169,1);
+  
+
+}
+body {
+    font-family:'Playfair Display';
+    background-color:  #010101;
+    color:  white;
+}
+
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #010101;
+  position: relative;
+  z-index: 2;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  border-bottom: 3px solid white;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+#showcase{
+  margin: 0;
+  padding: 0;
+  background: url('img/cover.jpg') no-repeat center/cover;
+  min-height: 100vh; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ 
+}
+a{
+  text-decoration: none;
+  color: rgb(129, 129, 129);
+}
+/*section*/
+.section{
+  padding: 2rem 0;
+}
+.section-head{
+  font-size: 2.5rem;
+  margin:0;
+}
+.google-maps {
+  position: relative;
+  padding-bottom: 0%; // This is the aspect ratio
+  height: 0px;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 83px;
+  right: 423px;
+  width:36% !important;
+  height: 365px !important;
+}
+.section h3{
+  font-size:2rem; 
+}
+.lead{
+  font-size: 1.2rem;
+}
+#Img2{
+  width: 70%;
+}
+.parallax{
+  background-image: url("img/mockup.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Buttons*/
+.btn{
+  padding: 1rem;
+  color: #222;
+  display:inline-block;
+}
+.btn-primary{
+  background: var(--light-color);
+  border-radius: 15px;
+
+}
+
+.btn-secondary{
+  background: #222;
+  border-radius: 15px;
+  color: white;
+}
+.btn-primary:hover{
+  background: var(--primary-color-hover);
+  border-radius: 15px;
+}
+.mb{
+  margin-bottom: 1rem;
+}
+.mt{
+  margin-top:1rem;
+}
+/*Utility classes*/
+.container{
+  max-width: 1180;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+  color: rgb(129, 129, 129);
+ 
+}
+#showcase .container{
+  margin-top:25vh;
+}
+.text-light2{
+  color: white
+}
+
+#showcase h1{ 
+  
+  font-family:'Playfair Display';
+  font-size: 4rem;
+  margin-bottom: 0;
+  color:  white;
+}
+
+#showcase h2{
+  font-size: 2rem;
+  color:  white;
+}
+.header2{
+  font-family:'Playfair Display';
+  font-size: 30px;
+  color:  #222;
+}
+.hide-on-small{
+  color:  white;
+}
+img{
+  height: 500px;
+  padding: 0%;
+  margin: 0%;
+}
+.bg-light{
+  background: var(--light-color);
+  
+}
+.dark-color{
+  color: #555
+}
+.light-color{
+  color: white;
+}
+footer{
+  border-top: 3px solid #222;
+}
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+footer .footer-cols ul {
+  list-style: none;
+}
+
+footer .footer-cols ul li:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #444 solid 1px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+  text-align: center;  
+  padding: 1rem;
+}
+
+
+@media (max-width:600px) {
+  #showcase{
+    height: 75vh;
+
+  }
+  img{
+    height: 20%;
+    width: 200px;
+  }
+  #showcase .container{
+    margin-top:10vh;
+  }
+  #showcase h1{
+    font-size:3rem;
+
+  }
+  #showcase .container{
+    font-size: 1.5rem;
+  }
+  .hide-on-small{
+    display: none;
+    }
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(75vh - 50px);
+      overflow-y: auto;
+    }
+  }
+  @media (max-width:800px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    footer .footer-cols {
+      display: none;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(75vh - 50px);
+      overflow-y: auto;
+    }
+    .hide-on-small{
+      display: none;
+    }
+  }
+  @media (max-width:1024px) {
+    .google-maps iframe{
+      display: none;
+    }
+  }
